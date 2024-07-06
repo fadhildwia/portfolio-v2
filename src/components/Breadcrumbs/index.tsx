@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import React from 'react'
 import { ChevronRightIcon } from '../../../public/icons';
-import { BreadcrumbsInterface } from '@/types';
+import { LinkInterface } from '@/types';
 
 interface Props {
-  data: Array<BreadcrumbsInterface>
+  data: Array<LinkInterface>
 }
 
 const Breadcrumbs = ({ data }: Props) => {
