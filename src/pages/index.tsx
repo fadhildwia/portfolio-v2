@@ -5,10 +5,14 @@ import Header from "@/components/Header"
 import Portfolio from "@/components/Portfolio"
 import Project from "@/components/Project"
 import { AboutData, ExperienceData, ProjectData, FooterData, PortfolioData } from "@/constants"
+import Head from "next/head"
 
 export default function Home() {
   return (
     <main className="max-w-screen-lg mx-auto flex flex-col gap-10 md:gap-16">
+      <Head>
+        <title>Fadhilah Dwi Ananda</title>
+      </Head>
       <Header title="Mid-Level Frontend Developer" />
       <About description={AboutData} />
       <Experience data={ExperienceData} />
