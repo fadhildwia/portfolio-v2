@@ -1,10 +1,10 @@
-import { FooterDataInterface } from '@/types';
+import { LinkInterface } from '@/types';
 import Link from 'next/link'
 import React from 'react'
 
 
 interface Props {
-  data: Array<FooterDataInterface>;
+  data: Array<LinkInterface>;
 }
 
 const Footer = ({ data }: Props) => {

@@ -11,7 +11,7 @@ export interface PortfolioDataInterface {
   title: string;
   desc: string;
   techStack: Array<string>;
-  platform: Array<string>;
+  platform: Array<LinkInterface>;
 }
 
 export interface ProjectDataInterface {
@@ -21,7 +21,7 @@ export interface ProjectDataInterface {
   techStack: Array<string>;
 }
 
-export interface FooterDataInterface {
-  title: string;
+export interface LinkInterface {
   url: string;
+  title: string;
 }

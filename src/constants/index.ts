@@ -1,4 +1,4 @@
-import { ExperienceDataInterface, ProjectDataInterface, FooterDataInterface, PortfolioDataInterface } from "@/types"
+import { ExperienceDataInterface, ProjectDataInterface, LinkInterface, PortfolioDataInterface } from "@/types"
 
 export const AboutData = `Hey there! Let's get straight to it! I'm Fadhilah and I
   love learning and creating new things on the internet. 
@@ -42,7 +42,20 @@ export const PortfolioData: PortfolioDataInterface[] = [
     as the CMS, is built using Next.js, while the mobile application
     for customers is developed using React Native.`,
     techStack: ["Next.js", "React Native", "TypeScript", "Jest"],
-    platform: ['website', 'android', 'ios']
+    platform: [
+      {
+        url: '/',
+        title: 'website'
+      },
+      {
+        url: '/',
+        title: 'android'
+      },
+      {
+        url: '/',
+        title: 'ios'
+      },
+    ]
   },
   {
     slug: "cas-ion",
@@ -53,7 +66,16 @@ export const PortfolioData: PortfolioDataInterface[] = [
       to publishing the app on the App Store and Play Store. The
       application is built using React Native.`,
     techStack: ["React Native", "TypeScript"],
-    platform: ['android', 'ios']
+    platform: [
+      {
+        url: '/',
+        title: 'android'
+      },
+      {
+        url: '/',
+        title: 'ios'
+      },
+    ]
   },
   {
     slug: "ruparupa",
@@ -65,7 +87,20 @@ export const PortfolioData: PortfolioDataInterface[] = [
       optimizing the product list, search product, and product detail sections
       using the third-party service Algolia.`,
     techStack: ["Next.js", "React Native", "TypeScript", "Redux", "Algolia"],
-    platform: ['website', 'android', 'ios']
+    platform: [
+      {
+        url: '/',
+        title: 'website'
+      },
+      {
+        url: '/',
+        title: 'android'
+      },
+      {
+        url: '/',
+        title: 'ios'
+      },
+    ]
   },
   {
     slug: "selma",
@@ -75,7 +110,16 @@ export const PortfolioData: PortfolioDataInterface[] = [
       React Native and based on the codebase of the Informa app,
       where I am responsible for the Frontend development.`,
     techStack: ["React Native", "TypeScript", "Redux"],
-    platform: ['android', 'ios']
+    platform: [
+      {
+        url: '/',
+        title: 'android'
+      },
+      {
+        url: '/',
+        title: 'ios'
+      },
+    ]
   },
   {
     slug: "sosialoka",
@@ -85,7 +129,20 @@ export const PortfolioData: PortfolioDataInterface[] = [
       ecosystem according to Indonesian regulations. The application is
       built using React and Ionic for cross-platform support.`,
     techStack: ["React", "TypeScript", "Ionic", "Redux"],
-    platform: ['website', 'android', 'ios']
+    platform: [
+      {
+        url: '/',
+        title: 'website'
+      },
+      {
+        url: '/',
+        title: 'android'
+      },
+      {
+        url: '/',
+        title: 'ios'
+      },
+    ]
   },
 ]
 
@@ -100,7 +157,7 @@ export const ProjectData: ProjectDataInterface[] = [
   },
 ]
 
-export const FooterData: FooterDataInterface[] = [
+export const FooterData: LinkInterface[] = [
   {
     title: "Github",
     url: "https://github.com/fadhildwia",

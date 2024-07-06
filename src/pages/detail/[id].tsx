@@ -1,10 +1,45 @@
+import { useRouter } from 'next/router';
 import React from 'react'
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { LinkInterface, PortfolioDataInterface } from '@/types';
+import { PortfolioData } from '@/constants';
+import TechStack from '@/components/TechStack';
+import Platform from '@/components/Platform';
 
-type Props = {}
+const Detail = () => {
+  const router = useRouter();
 
-const Detail = (props: Props) => {
+  console.log(router)
+
+  const data = PortfolioData.find((item) => item.slug === router.query.id) || {} as PortfolioDataInterface
+
+  const BreadcrumbsData: LinkInterface[] = [
+    {
+      url: '/',
+      title: 'Home'
+    },
+    {
+      url: '',
+      title: data.title as string
+    }
+  ]
+
   return (
-    <div>Soon...</div>
+    <div className="max-w-screen-lg mx-auto flex flex-col gap-6 md:gap-12">
+      <Breadcrumbs data={BreadcrumbsData} />
+      <h1 className='text-base sm:text-2xl font-medium'>{data.title}</h1>
+      <p className="flex flex-col gap-3 text-white-4 leading-[1.8] md:leading-[1.6] text-sm md:text-base">
+        {data.desc}
+      </p>
+      <div>
+        {data.techStack && <TechStack data={data.techStack} />}
+        {data.platform && <Platform data={data.platform} />}
+      </div>
+      <div>
+        <h2 className='text-md sm:text-xl font-medium'>Website</h2>
+        
+      </div>
+    </div>
   )
 }
 

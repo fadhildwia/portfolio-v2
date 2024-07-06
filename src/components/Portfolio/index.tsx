@@ -1,8 +1,9 @@
-/* eslint-disable react/no-unescaped-entities */
 import { PortfolioDataInterface } from "@/types"
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"
+import TechStack from "../TechStack";
+import Platform from "../Platform";
 
 interface Props {
   data: Array<PortfolioDataInterface>;
@@ -34,46 +35,8 @@ const Portfolio = ({ data }: Props) => {
               <p className="text-white-3 text-sm leading-[1.6] md:leading-[1.5] max-w-[800px]">
                 {item.desc}
               </p>
-              <ul className="flex flex-wrap items-center">
-                {item.techStack.map((tech, key) => (
-                  <li key={key} className="mt-2 md:mt-3 text-primary py-1 text-xs rounded flex items-start">
-                    {tech}
-                    {key !== item.techStack.length - 1 && <span className="mx-3">-</span>}
-                  </li>
-                ))}
-              </ul>
-              <ul className="flex items-center gap-3">
-                {item.platform.find((platform) => platform === 'website') && (
-                  <li className="mt-2 md:mt-3 text-primary py-1 text-xs flex-wrap rounded flex items-start">
-                    <Image
-                      src="/icons/browser.svg"
-                      alt={"icon"}
-                      width={16}
-                      height={16}
-                    />
-                  </li>
-                )}
-                {item.platform.find((platform) => platform === 'android') && (
-                  <li className="mt-2 md:mt-3 text-primary py-1 text-xs flex-wrap rounded flex items-start">
-                    <Image
-                      src="/icons/android.svg"
-                      alt={"icon"}
-                      width={16}
-                      height={16}
-                    />
-                  </li>
-                )}
-                {item.platform.find((platform) => platform === 'ios') && (
-                  <li className="mt-2 md:mt-3 text-primary py-1 text-xs flex-wrap rounded flex items-start">
-                    <Image
-                      src="/icons/apple.svg"
-                      alt={"icon"}
-                      width={16}
-                      height={16}
-                    />
-                  </li>
-                )}
-              </ul>
+              <TechStack data={item.techStack} />
+              <Platform data={item.platform} disabled />
             </Link>
           ))}
         </div>

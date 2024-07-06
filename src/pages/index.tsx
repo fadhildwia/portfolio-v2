@@ -3,8 +3,7 @@ import Experience from "@/components/Experience"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import Portfolio from "@/components/Portfolio"
-import Project from "@/components/Project"
-import { AboutData, ExperienceData, ProjectData, FooterData, PortfolioData } from "@/constants"
+import { AboutData, ExperienceData, FooterData, PortfolioData } from "@/constants"
 import Head from "next/head"
 
 export default function Home() {
