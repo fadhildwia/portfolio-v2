@@ -9,7 +9,7 @@ interface Props {
 
 const Platform = ({ data, disabled = false }: Props) => {
   const handleClick = (url: string) => {
-    if (disabled) return
+    if (disabled || url === '') return
     window.open(url)
   }
 

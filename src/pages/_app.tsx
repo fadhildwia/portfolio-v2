@@ -4,6 +4,8 @@ import type { AppProps } from "next/app";
 import { Poppins } from "next/font/google";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const poppins = Poppins({
   subsets: ['latin'],

@@ -44,15 +44,15 @@ export const PortfolioData: PortfolioDataInterface[] = [
     techStack: ["Next.js", "React Native", "TypeScript", "Jest"],
     platform: [
       {
-        url: '/',
+        url: '',
         title: 'website'
       },
       {
-        url: '/',
+        url: 'https://play.google.com/store/apps/details?id=com.sricandy.sricandy&hl=en_US',
         title: 'android'
       },
       {
-        url: '/',
+        url: '',
         title: 'ios'
       },
     ]
@@ -68,11 +68,11 @@ export const PortfolioData: PortfolioDataInterface[] = [
     techStack: ["React Native", "TypeScript"],
     platform: [
       {
-        url: '/',
+        url: 'https://play.google.com/store/apps/details?id=id.technopartner.casion&hl=en',
         title: 'android'
       },
       {
-        url: '/',
+        url: 'https://apps.apple.com/id/app/cas-ion/id6452981898',
         title: 'ios'
       },
     ]
@@ -89,15 +89,15 @@ export const PortfolioData: PortfolioDataInterface[] = [
     techStack: ["Next.js", "React Native", "TypeScript", "Redux", "Algolia"],
     platform: [
       {
-        url: '/',
+        url: 'https://www.ruparupa.com/',
         title: 'website'
       },
       {
-        url: '/',
+        url: 'https://play.google.com/store/apps/details?id=com.mobileappruparupa&hl=id',
         title: 'android'
       },
       {
-        url: '/',
+        url: 'https://apps.apple.com/id/app/ruparupa/id1324434624?l=id',
         title: 'ios'
       },
     ]
@@ -112,11 +112,11 @@ export const PortfolioData: PortfolioDataInterface[] = [
     techStack: ["React Native", "TypeScript", "Redux"],
     platform: [
       {
-        url: '/',
+        url: 'https://play.google.com/store/apps/details?id=mobi.mobileforce.selma&hl=id',
         title: 'android'
       },
       {
-        url: '/',
+        url: 'https://apps.apple.com/us/app/selma/id1628040383',
         title: 'ios'
       },
     ]
@@ -131,15 +131,15 @@ export const PortfolioData: PortfolioDataInterface[] = [
     techStack: ["React", "TypeScript", "Ionic", "Redux"],
     platform: [
       {
-        url: '/',
+        url: 'https://studio.coverclearance.id/',
         title: 'website'
       },
       {
-        url: '/',
+        url: '',
         title: 'android'
       },
       {
-        url: '/',
+        url: '',
         title: 'ios'
       },
     ]
