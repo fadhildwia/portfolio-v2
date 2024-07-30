@@ -166,4 +166,8 @@ export const FooterData: LinkInterface[] = [
     title: "LinkedIn",
     url: "https://www.linkedin.com/in/fadhilahdwiananda/",
   },
+  {
+    title: "Medium",
+    url: "https://medium.com/@fadhilahdwi.a",
+  },
 ]
