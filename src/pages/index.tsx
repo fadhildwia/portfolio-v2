@@ -1,25 +1,56 @@
+import { databases } from "@/appwrite/config"
 import About from "@/components/About"
 import Article from "@/components/Article"
 import Experience from "@/components/Experience"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import Portfolio from "@/components/Portfolio"
-import { AboutData, ArticleData, ExperienceData, FooterData, PortfolioData } from "@/constants"
+import { ArticleData, ExperienceData, FooterData, PortfolioData } from "@/constants"
+import { ExperienceDataInterface } from "@/types"
 import Head from "next/head"
 
-export default function Home() {
+interface Props {
+  data: {
+    title: string
+    about: string
+    experience: ExperienceDataInterface[]
+  }
+}
+
+export default function Home({ data }: Props) {
+  console.log(data)
   return (
     <main className="max-w-screen-lg mx-auto flex flex-col gap-10 md:gap-16">
       <Head>
         <title>Fadhilah Dwi Ananda</title>
       </Head>
-      <Header title="Mid-Level Frontend Developer" />
-      <About description={AboutData} />
-      <Experience data={ExperienceData} />
+      <Header title={data.title} />
+      <About description={data.about} />
+      <Experience data={data.experience} />
       <Portfolio data={PortfolioData} />
       <Article data={ArticleData} />
       {/* <Project data={ProjectData} /> */}
       <Footer data={FooterData} />
     </main>
   )
+}
+
+export async function getServerSideProps() {
+  const response = await databases.getDocument(
+    process.env.NEXT_PUBLIC_DATABASE_ID, 
+    process.env.NEXT_PUBLIC_COLLECTION_PROFILE_ID,
+    "66af5dfb0021765f654e"
+  )
+
+  if (response.experience.length > 0) {
+    response.experience?.sort((a: any, b: any) => {
+      return new Date(b.$createdAt).getTime() - new Date(a.$createdAt).getTime();
+    });
+  }
+
+  return {
+    props: {
+      data: response
+    }
+  }
 }
