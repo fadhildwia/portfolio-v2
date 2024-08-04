@@ -1,14 +1,14 @@
-import { PortfolioDataInterface } from '@/types'
+import { CardOneInterface } from '@/types'
 import Link from 'next/link'
 import React from 'react'
 import Platform from '../Platform'
 import TechStack from '../TechStack'
 import Image from 'next/image'
 
-const CardOne: React.FC<PortfolioDataInterface> = (item) => {
+const CardOne: React.FC<CardOneInterface> = (item) => {
   return (
     <Link
-      href={`/detail/${item.slug}`}
+      href={item.link}
       className="border border-border bg-background-3 p-6 rounded-lg flex flex-col gap-2 shadow-sm shadow-primary/50 hover:shadow-primary"
     >
       <div className="flex justify-between">
@@ -24,7 +24,7 @@ const CardOne: React.FC<PortfolioDataInterface> = (item) => {
         {item.desc}
       </p>
       <TechStack data={item.techStack} />
-      <Platform data={item.platform} disabled />
+      {item.platform && <Platform data={item.platform} disabled />}
     </Link>
   )
 }

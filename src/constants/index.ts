@@ -1,4 +1,4 @@
-import { ExperienceDataInterface, ProjectDataInterface, LinkInterface, PortfolioDataInterface } from "@/types"
+import { ExperienceDataInterface, ProjectDataInterface, LinkInterface, CardOneInterface } from "@/types"
 
 export const AboutData = `Hey there! Let's get straight to it! I'm Fadhilah and I
   love learning and creating new things on the internet. 
@@ -33,9 +33,9 @@ export const ExperienceData: ExperienceDataInterface[] = [
   },
 ]
 
-export const PortfolioData: PortfolioDataInterface[] = [
+export const PortfolioData: CardOneInterface[] = [
   {
-    slug: "sricandy",
+    link: "/detail/sricandy",
     title: "SriCandy - Uang Cermat (Akal Karya Indonesia) - 2024",
     desc: `SriCandy is an e-commerce application selling jewelry,
     currently available only in Singapore. The website, serving
@@ -58,7 +58,7 @@ export const PortfolioData: PortfolioDataInterface[] = [
     ]
   },
   {
-    slug: "cas-ion",
+    link: "/detail/cas-ion",
     title: "Cas-ion - Technopartner Indonesia - 2023",
     desc: `Cas-ion is an electronic vehicle (EV) charging application
       integrated with the third-party payment system Midtrans. In this
@@ -78,7 +78,7 @@ export const PortfolioData: PortfolioDataInterface[] = [
     ]
   },
   {
-    slug: "ruparupa",
+    link: "/detail/ruparupa",
     title: "Ruparupa - Technopartner Indonesia - 2023",
     desc: `Ruparupa is an e-commerce application focusing on household items.
       This application includes a website and mobile applications for Android
@@ -103,7 +103,7 @@ export const PortfolioData: PortfolioDataInterface[] = [
     ]
   },
   {
-    slug: "selma",
+    link: "/detail/selma",
     title: "Selma - Technopartner Indonesia - 2022",
     desc: `Selma is an e-commerce application focusing on furniture products.
       This mobile application is available for both Android and iOS, built using
@@ -122,7 +122,7 @@ export const PortfolioData: PortfolioDataInterface[] = [
     ]
   },
   {
-    slug: "sosialoka",
+    link: "/detail/sosialoka",
     title: "Sosialoka - Technopartner Indonesia - 2022",
     desc: `Sosialoka is a CMS application designed for Music Cover Producers
       and Label Clearance, enabling them to operate within a creative and legal
@@ -143,6 +143,39 @@ export const PortfolioData: PortfolioDataInterface[] = [
         title: 'ios'
       },
     ]
+  },
+]
+
+export const ArticleData: CardOneInterface[] = [
+  {
+    link: "https://medium.com/@fadhilahdwi.a/memahami-ssg-isr-dan-ssr-di-next-js-panduan-praktis-6f016e75c0a4",
+    title: "Memahami SSG, ISR, dan SSR di Next.js: Panduan Praktis",
+    desc: `August 2, 2024 • ☕️☕️ 3 min read`,
+    techStack: ["Next.js", "TypeScript", "SSG", "ISR", "SSR"]
+  },
+  {
+    link: "https://medium.com/@fadhilahdwi.a/testing-di-aplikasi-react-unit-testing-dan-integration-testing-dengan-jest-dan-react-testing-eb974a4f7275",
+    title: "Testing di Aplikasi React: Unit Testing dan Integration Testing dengan Jest dan React Testing Library",
+    desc: `July 31, 2024 • ☕️☕️ 3 min read`,
+    techStack: ["React", "TypeScript", "Jest", "React Testing Library"]
+  },
+  {
+    link: "https://medium.com/@fadhilahdwi.a/mengoptimalkan-performa-aplikasi-react-memoization-lazy-loading-dan-code-splitting-dengan-7694c5ed8215",
+    title: "Mengoptimalkan Performa Aplikasi React: Memoization, Lazy Loading, dan Code Splitting dengan TypeScript",
+    desc: `July 31, 2024 • ☕️☕️ 3 min read`,
+    techStack: ["React", "Optimization", "TypeScript", "UseMemo", "Cache"]
+  },
+  {
+    link: "https://medium.com/@fadhilahdwi.a/menguasai-react-hooks-a-deep-dive-d7de073e10d9",
+    title: "Menguasai React Hooks: A Deep Dive",
+    desc: `July 31, 2024 • ☕️ 2 min read`,
+    techStack: ["React", "TypeScript", "React Hook", "useState", "Hook in React"]
+  },
+  {
+    link: "https://medium.com/@fadhilahdwi.a/penjelasan-dari-csr-ssr-ssg-dan-isr-35239990ba3c",
+    title: "Penjelasan dari CSR, SSR, SSG, dan ISR",
+    desc: `May 27, 2024 • ☕️☕️ 4 min read`,
+    techStack: ["JavaScript", "TypeScript", "SSG", "ISR", "SSR"]
   },
 ]
 

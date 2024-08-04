@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import React from 'react'
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { LinkInterface, PortfolioDataInterface } from '@/types';
+import { LinkInterface, CardOneInterface } from '@/types';
 import { PortfolioData } from '@/constants';
 import TechStack from '@/components/TechStack';
 import Platform from '@/components/Platform';
@@ -21,7 +21,8 @@ const Detail = () => {
     cssEase: "linear"
   };
 
-  const data = PortfolioData.find((item) => item.slug === router.query.id) || {} as PortfolioDataInterface
+  console.log(router)
+  const data = PortfolioData.find((item) => item.link === router.asPath) || {} as CardOneInterface
 
   const BreadcrumbsData: LinkInterface[] = [
     {

@@ -6,12 +6,12 @@ export interface ExperienceDataInterface {
   techStack: Array<string>;
 }
 
-export interface PortfolioDataInterface {
-  slug: string;
+export interface CardOneInterface {
+  link: string;
   title: string;
   desc: string;
   techStack: Array<string>;
-  platform: Array<LinkInterface>;
+  platform?: Array<LinkInterface>;
 }
 
 export interface ProjectDataInterface {
