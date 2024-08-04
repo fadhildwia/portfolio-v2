@@ -46,6 +46,7 @@ const Detail = () => {
         {data.platform && <Platform data={data.platform} />}
       </div>
       <div>
+      <div className='text-center font-bold text-lg'>SOON DETAIL IMAGE</div>
         {/* <h2 className='text-md sm:text-xl font-medium'>Website</h2> */}
         {/* <div className="slider-container">
           <Slider {...settings}>

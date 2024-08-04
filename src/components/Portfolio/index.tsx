@@ -1,15 +1,15 @@
 import { PortfolioDataInterface } from "@/types"
-import Image from "next/image"
-import Link from "next/link"
-import React from "react"
-import TechStack from "../TechStack";
-import Platform from "../Platform";
+import React, { useState } from "react"
+import { CardOne } from "../Card";
 
 interface Props {
   data: Array<PortfolioDataInterface>;
 }
 
 const Portfolio = ({ data }: Props) => {
+  const [expand, setExpand] = useState<Boolean>(false);
+  const limitedData = data.slice(0, 2);
+
   return (
     <section>
       <div>
@@ -17,28 +17,21 @@ const Portfolio = ({ data }: Props) => {
           Previous Portfolio
         </h2>
         <div className="flex flex-col gap-3">
-          {data.map((item, index) => (
-            <Link
-              key={index}
-              href={`/detail/${item.slug}`}
-              className="border border-border bg-background-3 p-6 rounded-lg shadow flex flex-col gap-2"
-            >
-              <div className="flex justify-between">
-                <h3 className="text-sm">{item.title}</h3>
-                <Image
-                  src="/icons/open-link.svg"
-                  alt={"icon"}
-                  width={16}
-                  height={16}
-                />
-              </div>
-              <p className="text-white-3 text-sm leading-[1.6] md:leading-[1.5] max-w-[800px]">
-                {item.desc}
-              </p>
-              <TechStack data={item.techStack} />
-              <Platform data={item.platform} disabled />
-            </Link>
-          ))}
+          {expand ? (
+            data.map((item, index) => (
+              <CardOne key={index} {...item} />
+            ))
+          ) : (
+            limitedData.map((item, index) => (
+              <CardOne key={index} {...item} />
+            ))
+          )}
+          <div
+            className="border-2 border-primary bg-background-3 text-center p-2 rounded-lg hover:bg-primary/50 cursor-pointer shadow-md shadow-primary/50"
+            onClick={() => setExpand(!expand)}
+          >
+            {expand ? 'Show Less' : 'Show More'}
+          </div>
         </div>
       </div>
     </section>
