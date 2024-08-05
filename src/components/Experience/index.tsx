@@ -22,7 +22,7 @@ const Experience = ({ data }: Props) => {
               {item.desc}
             </p>
             <ul className="flex flex-wrap items-center gap-[6px] mt-3 md:mt-0">
-              {item.techStack.map((tech, key) => (
+              {item.techStack && item.techStack.map((tech, key) => (
                 <li key={key} className="md:mt-3 bg-background-2 text-primary py-1 px-2 border border-border text-xs rounded shadow-md shadow-primary/35">
                   {tech.title}
                 </li>

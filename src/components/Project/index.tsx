@@ -35,7 +35,7 @@ const Project = ({ data }: Props) => {
               <p className="text-white-3 text-sm leading-[1.6] md:leading-[1.5] max-w-[800px]">
                 {item.desc}
               </p>
-              <TechStack data={item.techStack} />
+              {item.techStack && <TechStack data={item.techStack} />}
             </Link>
           ))}
         </div>
