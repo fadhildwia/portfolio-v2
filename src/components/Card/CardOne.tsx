@@ -23,7 +23,7 @@ const CardOne: React.FC<CardOneInterface> = (item) => {
       <p className="text-white-3 text-sm leading-[1.6] md:leading-[1.5] max-w-[800px] line-clamp-3">
         {item.desc}
       </p>
-      <TechStack data={item.techStack} />
+      {item.techStack && <TechStack data={item.techStack} />}
       {item.platform && <Platform data={item.platform} disabled />}
     </Link>
   )
