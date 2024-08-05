@@ -18,7 +18,6 @@ export const ExperienceData: ExperienceDataInterface[] = [
       usability, collaborate with colleagues on the backend, and focus on user needs 
       and usability. Test the site thoroughly, and ensure the application is 
       user-friendly, visually appealing, and fully functional.`,
-    techStack: ["Next.js", "React Native", "Styled Components", "TypeScript", "Jest"],
   },
   {
     date: "August 2021 - November 2023",
@@ -29,7 +28,6 @@ export const ExperienceData: ExperienceDataInterface[] = [
       from scratch and execute the process of publishing the application to Play 
       Store and App Store. Experienced in Kanban environment, managing tasks 
       efficiently and fostering teamwork. Client included Sosialoka, Selma, Ruparupa, and Cas-Ion.`,
-    techStack: ["React.js", "Next.js", "React Native", "Ionic", "Redux", "Styled Components", "JavaScript", "TypeScript"],
   },
 ]
 
@@ -41,7 +39,6 @@ export const PortfolioData: CardOneInterface[] = [
     currently available only in Singapore. The website, serving
     as the CMS, is built using Next.js, while the mobile application
     for customers is developed using React Native.`,
-    techStack: ["Next.js", "React Native", "TypeScript", "Jest"],
     platform: [
       {
         url: '',
@@ -65,7 +62,6 @@ export const PortfolioData: CardOneInterface[] = [
       project, I am responsible for the Frontend development from inception
       to publishing the app on the App Store and Play Store. The
       application is built using React Native.`,
-    techStack: ["React Native", "TypeScript"],
     platform: [
       {
         url: 'https://play.google.com/store/apps/details?id=id.technopartner.casion&hl=en',
@@ -86,7 +82,6 @@ export const PortfolioData: CardOneInterface[] = [
       are developed using React Native. My scope of work for this project includes
       optimizing the product list, search product, and product detail sections
       using the third-party service Algolia.`,
-    techStack: ["Next.js", "React Native", "TypeScript", "Redux", "Algolia"],
     platform: [
       {
         url: 'https://www.ruparupa.com/',
@@ -109,7 +104,6 @@ export const PortfolioData: CardOneInterface[] = [
       This mobile application is available for both Android and iOS, built using
       React Native and based on the codebase of the Informa app,
       where I am responsible for the Frontend development.`,
-    techStack: ["React Native", "TypeScript", "Redux"],
     platform: [
       {
         url: 'https://play.google.com/store/apps/details?id=mobi.mobileforce.selma&hl=id',
@@ -128,7 +122,6 @@ export const PortfolioData: CardOneInterface[] = [
       and Label Clearance, enabling them to operate within a creative and legal
       ecosystem according to Indonesian regulations. The application is
       built using React and Ionic for cross-platform support.`,
-    techStack: ["React", "TypeScript", "Ionic", "Redux"],
     platform: [
       {
         url: 'https://studio.coverclearance.id/',
@@ -151,30 +144,25 @@ export const ArticleData: CardOneInterface[] = [
     link: "https://medium.com/@fadhilahdwi.a/memahami-ssg-isr-dan-ssr-di-next-js-panduan-praktis-6f016e75c0a4",
     title: "Memahami SSG, ISR, dan SSR di Next.js: Panduan Praktis",
     desc: `August 2, 2024 • ☕️☕️ 3 min read`,
-    techStack: ["Next.js", "TypeScript", "SSG", "ISR", "SSR"]
   },
   {
     link: "https://medium.com/@fadhilahdwi.a/testing-di-aplikasi-react-unit-testing-dan-integration-testing-dengan-jest-dan-react-testing-eb974a4f7275",
     title: "Testing di Aplikasi React: Unit Testing dan Integration Testing dengan Jest dan React Testing Library",
     desc: `July 31, 2024 • ☕️☕️ 3 min read`,
-    techStack: ["React", "TypeScript", "Jest", "React Testing Library"]
   },
   {
     link: "https://medium.com/@fadhilahdwi.a/mengoptimalkan-performa-aplikasi-react-memoization-lazy-loading-dan-code-splitting-dengan-7694c5ed8215",
     title: "Mengoptimalkan Performa Aplikasi React: Memoization, Lazy Loading, dan Code Splitting dengan TypeScript",
     desc: `July 31, 2024 • ☕️☕️ 3 min read`,
-    techStack: ["React", "Optimization", "TypeScript", "UseMemo", "Cache"]
   },
   {
     link: "https://medium.com/@fadhilahdwi.a/menguasai-react-hooks-a-deep-dive-d7de073e10d9",
     title: "Menguasai React Hooks: A Deep Dive",
     desc: `July 31, 2024 • ☕️ 2 min read`,
-    techStack: ["React", "TypeScript", "React Hook", "useState", "Hook in React"]
   },
   {
     link: "https://medium.com/@fadhilahdwi.a/penjelasan-dari-csr-ssr-ssg-dan-isr-35239990ba3c",
     title: "Penjelasan dari CSR, SSR, SSG, dan ISR",
     desc: `May 27, 2024 • ☕️☕️ 4 min read`,
-    techStack: ["JavaScript", "TypeScript", "SSG", "ISR", "SSR"]
   },
 ]
