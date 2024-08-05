@@ -1,4 +1,4 @@
-import { ExperienceDataInterface, ProjectDataInterface, LinkInterface, CardOneInterface } from "@/types"
+import { ExperienceDataInterface, CardOneInterface } from "@/types"
 
 export const AboutData = `Hey there! Let's get straight to it! I'm Fadhilah and I
   love learning and creating new things on the internet. 
@@ -176,31 +176,5 @@ export const ArticleData: CardOneInterface[] = [
     title: "Penjelasan dari CSR, SSR, SSG, dan ISR",
     desc: `May 27, 2024 • ☕️☕️ 4 min read`,
     techStack: ["JavaScript", "TypeScript", "SSG", "ISR", "SSR"]
-  },
-]
-
-export const ProjectData: ProjectDataInterface[] = [
-  {
-    url: "",
-    title: "Test 1",
-    desc: `A simple clone of Excalidraw built with React and TypeScript. I
-      made this side project for learning purposes. The app isn't
-      responsive, but I prioritized functionalities over responsiveness.`,
-    techStack: ["React", "TypeScript"],
-  },
-]
-
-export const FooterData: LinkInterface[] = [
-  {
-    title: "Github",
-    url: "https://github.com/fadhildwia",
-  },
-  {
-    title: "LinkedIn",
-    url: "https://www.linkedin.com/in/fadhilahdwiananda/",
-  },
-  {
-    title: "Medium",
-    url: "https://medium.com/@fadhilahdwi.a",
   },
 ]

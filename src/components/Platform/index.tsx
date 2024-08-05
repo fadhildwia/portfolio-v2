@@ -20,7 +20,7 @@ const Platform = ({ data, disabled = false }: Props) => {
           key={index}
           className="mt-2 md:mt-3 text-primary py-1 text-xs flex-wrap rounded flex items-start"
         >
-          {item.title === "website" && (
+          {item.platform === "website" && (
             <div
               onClick={() => handleClick(item.url)}
               className="cursor-pointer"
@@ -28,7 +28,7 @@ const Platform = ({ data, disabled = false }: Props) => {
               <BrowserIcon className="stroke-primary h-5 w-5" />
             </div>
           )}
-          {item.title === "android" && (
+          {item.platform === "android" && (
             <div
               onClick={() => handleClick(item.url)}
               className="cursor-pointer"
@@ -36,7 +36,7 @@ const Platform = ({ data, disabled = false }: Props) => {
               <AndroidIcon className="stroke-primary h-5 w-5" />
             </div>
           )}
-          {item.title === "ios" && (
+          {item.platform === "ios" && (
             <div
               onClick={() => handleClick(item.url)}
               className="cursor-pointer"

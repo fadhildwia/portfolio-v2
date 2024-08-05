@@ -1,10 +1,10 @@
-import { LinkInterface } from '@/types';
+import { FooterInterface } from '@/types';
 import Link from 'next/link'
 import React from 'react'
 
 
 interface Props {
-  data: Array<LinkInterface>;
+  data: Array<FooterInterface>;
 }
 
 const Footer = ({ data }: Props) => {
@@ -14,7 +14,7 @@ const Footer = ({ data }: Props) => {
         <div className='flex justify-around md:gap-[100px] md:justify-center text-white-4 text-sm'>
           <div className='flex flex-col md:flex-row gap-2 md:gap-4 text-center'>
             {data.map((item, index) => ((
-              <Link key={index} href={item.url} className='underline underline-offset-4 hover:decoration-primary hover:text-primary'>{item.title}</Link>
+              <Link key={index} href={item.link} className='underline underline-offset-4 hover:decoration-primary hover:text-primary'>{item.title}</Link>
             )))}
           </div>
         </div>

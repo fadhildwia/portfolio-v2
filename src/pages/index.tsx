@@ -5,8 +5,7 @@ import Experience from "@/components/Experience"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import Portfolio from "@/components/Portfolio"
-import { ArticleData, ExperienceData, FooterData, PortfolioData } from "@/constants"
-import { ExperienceDataInterface } from "@/types"
+import { CardOneInterface, ExperienceDataInterface, FooterInterface } from "@/types"
 import Head from "next/head"
 
 interface Props {
@@ -14,11 +13,13 @@ interface Props {
     title: string
     about: string
     experience: ExperienceDataInterface[]
+    portfolio: CardOneInterface[]
+    article: CardOneInterface[]
+    footer: FooterInterface[]
   }
 }
 
 export default function Home({ data }: Props) {
-  console.log(data)
   return (
     <main className="max-w-screen-lg mx-auto flex flex-col gap-10 md:gap-16">
       <Head>
@@ -27,10 +28,10 @@ export default function Home({ data }: Props) {
       <Header title={data.title} />
       <About description={data.about} />
       <Experience data={data.experience} />
-      <Portfolio data={PortfolioData} />
-      <Article data={ArticleData} />
+      <Portfolio data={data.portfolio} />
+      <Article data={data.article} />
       {/* <Project data={ProjectData} /> */}
-      <Footer data={FooterData} />
+      <Footer data={data.footer} />
     </main>
   )
 }
@@ -45,6 +46,18 @@ export async function getServerSideProps() {
   if (response.experience.length > 0) {
     response.experience?.sort((a: any, b: any) => {
       return new Date(b.$createdAt).getTime() - new Date(a.$createdAt).getTime();
+    });
+  }
+
+  if (response.portfolio.length > 0) {
+    response.portfolio?.sort((a: any, b: any) => {
+      return b.order - a.order
+    });
+  }
+
+  if (response.article.length > 0) {
+    response.article?.sort((a: any, b: any) => {
+      return b.order - a.order
     });
   }
 
