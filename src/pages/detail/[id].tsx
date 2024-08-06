@@ -21,7 +21,6 @@ const Detail = () => {
     cssEase: "linear"
   };
 
-  console.log(router)
   const data = PortfolioData.find((item) => item.link === router.asPath) || {} as CardOneInterface
 
   const BreadcrumbsData: LinkInterface[] = [

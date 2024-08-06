@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import AppContext from "@/context/AppContext";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -46,8 +47,10 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <main className={poppins.className}>
-      <SpeedInsights />
-      <Component {...pageProps} />
+      <AppContext>
+        <SpeedInsights />
+        <Component {...pageProps} />
+      </AppContext>
     </main>
   );
 }

@@ -1,13 +1,14 @@
 import { CardOneInterface } from "@/types"
 import React, { useState } from "react"
 import { CardOne } from "../Card";
+import { useGlobal } from "@/context/GlobalContext";
 
 interface Props {
   data: Array<CardOneInterface>;
 }
 
 const Article = ({ data }: Props) => {
-  const [expand, setExpand] = useState<Boolean>(false);
+  const { expandArticle, setExpandArticle } = useGlobal();
   const limitedData = data.slice(0, 2);
 
   return (
@@ -17,7 +18,7 @@ const Article = ({ data }: Props) => {
           Latest Article
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          {expand ? (
+          {expandArticle ? (
             data.map((item, index) => (
               <CardOne key={index} {...item} />
             ))
@@ -29,9 +30,9 @@ const Article = ({ data }: Props) => {
         </div>
         <div
             className="border-2 border-primary bg-background-3 text-center p-2 rounded-lg hover:bg-primary/50 cursor-pointer shadow-md shadow-primary/50"
-            onClick={() => setExpand(!expand)}
+            onClick={() => setExpandArticle(!expandArticle)}
           >
-            {expand ? 'Show Less' : 'Show More'}
+            {expandArticle ? 'Show Less' : 'Show More'}
           </div>
       </div>
     </section>
